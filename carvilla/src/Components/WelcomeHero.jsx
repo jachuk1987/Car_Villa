@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/styles/style.css'; // Include your custom styles
 
 class WelcomeHero extends Component {
   render() {
