@@ -1,22 +1,19 @@
 import React, { Component } from "react";
 
-class NewCars extends Component {
+class NewCarsSection extends Component {
   render() {
     return (
       <section id="new-cars" className="new-cars">
         <div className="container">
-          {/* Section Header */}
           <div className="section-header">
             <p>
               checkout <span>the</span> latest cars
             </p>
             <h2>newest cars</h2>
           </div>
-          {/* New Cars Content */}
           <div className="new-cars-content">
-            {/* Carousel */}
             <div className="owl-carousel owl-theme" id="new-cars-carousel">
-              {/* Car 1 */}
+              {/* New Car Item 1 */}
               <div className="new-cars-item">
                 <div className="single-new-cars-item">
                   <div className="row">
@@ -41,12 +38,12 @@ class NewCars extends Component {
                           laborum.
                         </p>
                         <p className="new-cars-para2">
-                          Sed ut pers unde omnis iste natus error sit voluptatem
-                          accusantium doloremque laudantium.
+                          Sed ut pers unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium.
                         </p>
                         <button
                           className="welcome-btn new-cars-btn"
-                          onClick={() => (window.location.href = "#")}
+                          onClick={() => window.location.href = "#"}
                         >
                           view details
                         </button>
@@ -55,7 +52,7 @@ class NewCars extends Component {
                   </div>
                 </div>
               </div>
-              {/* Car 2 */}
+              {/* New Car Item 2 */}
               <div className="new-cars-item">
                 <div className="single-new-cars-item">
                   <div className="row">
@@ -80,12 +77,12 @@ class NewCars extends Component {
                           laborum.
                         </p>
                         <p className="new-cars-para2">
-                          Sed ut pers unde omnis iste natus error sit voluptatem
-                          accusantium doloremque laudantium.
+                          Sed ut pers unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium.
                         </p>
                         <button
                           className="welcome-btn new-cars-btn"
-                          onClick={() => (window.location.href = "#")}
+                          onClick={() => window.location.href = "#"}
                         >
                           view details
                         </button>
@@ -94,7 +91,7 @@ class NewCars extends Component {
                   </div>
                 </div>
               </div>
-              {/* Car 3 */}
+              {/* New Car Item 3 */}
               <div className="new-cars-item">
                 <div className="single-new-cars-item">
                   <div className="row">
@@ -119,12 +116,12 @@ class NewCars extends Component {
                           laborum.
                         </p>
                         <p className="new-cars-para2">
-                          Sed ut pers unde omnis iste natus error sit voluptatem
-                          accusantium doloremque laudantium.
+                          Sed ut pers unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium.
                         </p>
                         <button
                           className="welcome-btn new-cars-btn"
-                          onClick={() => (window.location.href = "#")}
+                          onClick={() => window.location.href = "#"}
                         >
                           view details
                         </button>
@@ -141,4 +138,4 @@ class NewCars extends Component {
   }
 }
 
-export default NewCars;
+export default NewCarsSection;

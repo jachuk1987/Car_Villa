@@ -3,6 +3,7 @@ import './App.css';
 import WelcomeHero from './Components/WelcomeHero';
 import ServiceSection from './Components/ServiceSection';
 import NewCars from './Components/NewCars';
+import FeaturedCars from './Components/FeaturedCars';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <WelcomeHero />
       <ServiceSection />
       <NewCars />
+      <FeaturedCars />
     </div>
   );
 }
