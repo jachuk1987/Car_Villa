@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <WelcomeHero />
       <ServiceSection />
-      <NewCars
+      <NewCars />
     </div>
   );
 }
