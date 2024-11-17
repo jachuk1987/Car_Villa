@@ -158,3 +158,5 @@ class WelcomeHero extends Component {
 }
 
 export default WelcomeHero;
+
+// import "../../public/assets/images/new-cars-model/ncm1.png"
