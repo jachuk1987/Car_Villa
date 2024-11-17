@@ -4,6 +4,7 @@ import WelcomeHero from './Components/WelcomeHero';
 import ServiceSection from './Components/ServiceSection';
 import NewCars from './Components/NewCars';
 import FeaturedCars from './Components/FeaturedCars';
+import ClientsSay from './Components/ClientsSay';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ServiceSection />
       <NewCars />
       <FeaturedCars />
+      <ClientsSay />
     </div>
   );
 }
