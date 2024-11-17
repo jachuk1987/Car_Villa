@@ -1,7 +1,39 @@
 import React, { Component } from "react";
 
-class NewCarsSection extends Component {
+
+class NewCars extends Component {
   render() {
+    // Array of car details to dynamically render items
+    const carItems = [
+      {
+        id: 1,
+        title: "Chevrolet Camaro ZA100",
+        description1:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description2:
+          "Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        image: "/assets/images/new-cars-model/ncm1.png",
+      },
+      {
+        id: 2,
+        title: "BMW Series-3 Wagon",
+        description1:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description2:
+          "Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        image: "/assets/images/new-cars-model/ncm2.png",
+      },
+      {
+        id: 3,
+        title: "Ferrari 488 Superfast",
+        description1:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description2:
+          "Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        image: "/assets/images/new-cars-model/ncm3.png",
+      },
+    ];
+
     return (
       <section id="new-cars" className="new-cars">
         <div className="container">
@@ -13,123 +45,34 @@ class NewCarsSection extends Component {
           </div>
           <div className="new-cars-content">
             <div className="owl-carousel owl-theme" id="new-cars-carousel">
-              {/* New Car Item 1 */}
-              <div className="new-cars-item">
-                <div className="single-new-cars-item">
-                  <div className="row">
-                    <div className="col-md-7 col-sm-12">
-                      <div className="new-cars-img">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/new-cars-model/ncm1.png`}
-                          alt="Chevrolet Camaro"
-                        />
+              {carItems.map((car) => (
+                <div key={car.id} className="new-cars-item">
+                  <div className="single-new-cars-item">
+                    <div className="row">
+                      <div className="col-md-7 col-sm-12">
+                        <div className="new-cars-img">
+                          <img src={car.image} alt={car.title} />
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-md-5 col-sm-12">
-                      <div className="new-cars-txt">
-                        <h2>
-                          <a href="#">chevrolet camaro <span>za100</span></a>
-                        </h2>
-                        <p>
-                          Duis aute irure dolor in reprehenderit in voluptate
-                          velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-                        <p className="new-cars-para2">
-                          Sed ut pers unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium.
-                        </p>
-                        <button
-                          className="welcome-btn new-cars-btn"
-                          onClick={() => window.location.href = "#"}
-                        >
-                          view details
-                        </button>
+                      <div className="col-md-5 col-sm-12">
+                        <div className="new-cars-txt">
+                          <h2>
+                            <a href="#">{car.title}</a>
+                          </h2>
+                          <p>{car.description1}</p>
+                          <p className="new-cars-para2">{car.description2}</p>
+                          <button
+                            className="welcome-btn new-cars-btn"
+                            onClick={() => (window.location.href = "#")}
+                          >
+                            view details
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              {/* New Car Item 2 */}
-              <div className="new-cars-item">
-                <div className="single-new-cars-item">
-                  <div className="row">
-                    <div className="col-md-7 col-sm-12">
-                      <div className="new-cars-img">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/new-cars-model/ncm2.png`}
-                          alt="BMW Series 3"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-5 col-sm-12">
-                      <div className="new-cars-txt">
-                        <h2>
-                          <a href="#">BMW series-3 wagon</a>
-                        </h2>
-                        <p>
-                          Duis aute irure dolor in reprehenderit in voluptate
-                          velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-                        <p className="new-cars-para2">
-                          Sed ut pers unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium.
-                        </p>
-                        <button
-                          className="welcome-btn new-cars-btn"
-                          onClick={() => window.location.href = "#"}
-                        >
-                          view details
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* New Car Item 3 */}
-              <div className="new-cars-item">
-                <div className="single-new-cars-item">
-                  <div className="row">
-                    <div className="col-md-7 col-sm-12">
-                      <div className="new-cars-img">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/assets/images/new-cars-model/ncm3.png`}
-                          alt="Ferrari 488"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-5 col-sm-12">
-                      <div className="new-cars-txt">
-                        <h2>
-                          <a href="#">ferrari 488 superfast</a>
-                        </h2>
-                        <p>
-                          Duis aute irure dolor in reprehenderit in voluptate
-                          velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </p>
-                        <p className="new-cars-para2">
-                          Sed ut pers unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium.
-                        </p>
-                        <button
-                          className="welcome-btn new-cars-btn"
-                          onClick={() => window.location.href = "#"}
-                        >
-                          view details
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -138,4 +81,4 @@ class NewCarsSection extends Component {
   }
 }
 
-export default NewCarsSection;
+export default NewCars;
